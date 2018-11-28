@@ -1,3 +1,3 @@
-import {Button} from 'evergreen-ui'
+import { Button } from 'evergreen-ui';
 
-console.log(Button)
+ReactDOM.render(<Button />, document.getElementById('root'));

@@ -1,6 +1,6 @@
-'use strict'
-const path = require('path')
-const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
+'use strict';
+const path = require('path');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: 'production',
@@ -12,5 +12,17 @@ module.exports = {
     path: path.resolve('./build'),
     filename: '[name].js'
   },
-  plugins: [new BundleAnalyzerPlugin({analyzerMode: 'static'})]
-}
+  module: {
+    rules: [
+      {
+        test: /\.(js)$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['react']
+        }
+      }
+    ]
+  },
+  plugins: [new BundleAnalyzerPlugin({ analyzerMode: 'static' })]
+};
