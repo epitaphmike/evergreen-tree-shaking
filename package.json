@@ -19,6 +19,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-preset-react": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
     "webpack": "^4.26.1",
     "webpack-bundle-analyzer": "^3.0.3",
     "webpack-cli": "^3.1.2",
